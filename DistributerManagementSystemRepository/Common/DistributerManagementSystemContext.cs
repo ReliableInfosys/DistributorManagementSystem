@@ -35,13 +35,13 @@ namespace DistributerManagementSystemRepository.Common
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductCategory>().HasData(
-                new ProductCategory { Id = 1, Name="General Items", GSTPercentage=0 },
-                new ProductCategory { Id = 2, Name = "Beverages", GSTPercentage=18 },
-                new ProductCategory { Id = 3, Name = "Biscuits" , GSTPercentage=18},
-                new ProductCategory { Id = 4, Name = "Cakes", GSTPercentage=18 },
-                new ProductCategory { Id = 5, Name = "Spices", GSTPercentage=5 },
-                new ProductCategory { Id = 6, Name = "Lahori Beverages", GSTPercentage=12 },
-                new ProductCategory { Id = 7, Name = "Butter", GSTPercentage=12 }
+                new ProductCategory {  Name = "General Items", GSTPercentage = 0 },
+                new ProductCategory {  Name = "Beverages", GSTPercentage = 18 },
+                new ProductCategory {  Name = "Biscuits", GSTPercentage = 18 },
+                new ProductCategory {  Name = "Cakes", GSTPercentage = 18 },
+                new ProductCategory {  Name = "Spices", GSTPercentage = 5 },
+                new ProductCategory {  Name = "Lahori Beverages", GSTPercentage = 12 },
+                new ProductCategory {  Name = "Butter", GSTPercentage = 12 }
 
 
                 );

@@ -10,6 +10,6 @@ namespace DistributerManagementSystemModels
     {       
 
         public decimal GSTPercentage { get; set; }
-        
+        public string Name { get; set; }
     }
 }
