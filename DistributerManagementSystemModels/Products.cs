@@ -17,6 +17,7 @@ namespace DistributerManagementSystemModels
         [DisplayName("Product Description")]
         public string? ProductDescription { get; set; }
         [DisplayName("Select Category")]
+     
         public string ProductCategory { get; set; }
 
         public string? Unit { get; set; }

@@ -19,7 +19,7 @@ namespace DistributerManagementSystemBusinessLogic.Impl
             this.ProductCategoryRepository = ProductCategoryRepository;
         }
 
-        public void Add(ProductCategory entity)
+        public void Add(ProductsCategory entity)
         {
             try
             {
@@ -31,18 +31,18 @@ namespace DistributerManagementSystemBusinessLogic.Impl
             }
         }
 
-        public void Delete(ProductCategory entity)
+        public void Delete(ProductsCategory entity)
         {
             entity.IsActive = false;
             ProductCategoryRepository.Update(entity);
         }
 
-        public IQueryable<ProductCategory> FindBy(Expression<Func<ProductCategory, bool>> predicate)
+        public IQueryable<ProductsCategory> FindBy(Expression<Func<ProductsCategory, bool>> predicate)
         {
             return ProductCategoryRepository.FindBy(predicate).Where(x => x.IsActive == true);
         }
 
-        public IQueryable<ProductCategory> GetAll()
+        public IQueryable<ProductsCategory> GetAll()
         {
             return ProductCategoryRepository.GetAll().Where(x => x.IsActive == true);
         }
@@ -52,7 +52,7 @@ namespace DistributerManagementSystemBusinessLogic.Impl
             ProductCategoryRepository.Save();
         }
 
-        public void Update(ProductCategory entity)
+        public void Update(ProductsCategory entity)
         {
             try
             {

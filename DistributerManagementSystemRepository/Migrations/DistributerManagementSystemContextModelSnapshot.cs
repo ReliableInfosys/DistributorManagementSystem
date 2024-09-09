@@ -125,70 +125,6 @@ namespace DistributerManagementSystemRepository.Migrations
                     b.ToTable("Orderbooks");
                 });
 
-            modelBuilder.Entity("DistributerManagementSystemModels.ProductCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<decimal>("GSTPercentage")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ProductCategories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            GSTPercentage = 0m,
-                            Name = "General Items"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            GSTPercentage = 18m,
-                            Name = "Beverages"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            GSTPercentage = 18m,
-                            Name = "Biscuits"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            GSTPercentage = 18m,
-                            Name = "Cakes"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            GSTPercentage = 5m,
-                            Name = "Spices"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            GSTPercentage = 12m,
-                            Name = "Lahori Beverages"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            GSTPercentage = 12m,
-                            Name = "Butter"
-                        });
-                });
-
             modelBuilder.Entity("DistributerManagementSystemModels.ProductPurchaseOrderbook", b =>
                 {
                     b.Property<Guid>("Id")
@@ -308,6 +244,113 @@ namespace DistributerManagementSystemRepository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("DistributerManagementSystemModels.ProductsCategory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("GSTPercentage")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TempId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b3a6650a-43e9-4077-9d73-9f152d41837f"),
+                            DateCreated = new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Local),
+                            GSTPercentage = 0m,
+                            IsActive = true,
+                            Name = "General Items",
+                            TempId = new Guid("cf786134-c321-476f-a65f-2050cb0fa8b4")
+                        },
+                        new
+                        {
+                            Id = new Guid("dcc0f556-d268-4bd8-8e00-105e5dff9aa7"),
+                            DateCreated = new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Local),
+                            GSTPercentage = 18m,
+                            IsActive = true,
+                            Name = "Beverages",
+                            TempId = new Guid("9d0fc52a-381d-478b-a5ae-87ccdfe98d44")
+                        },
+                        new
+                        {
+                            Id = new Guid("dd7c47ee-73a3-45f2-aa91-08be964bb720"),
+                            DateCreated = new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Local),
+                            GSTPercentage = 18m,
+                            IsActive = true,
+                            Name = "Biscuits",
+                            TempId = new Guid("db63b984-4eb6-4366-8483-e21dc9caa8fe")
+                        },
+                        new
+                        {
+                            Id = new Guid("b6767123-9199-46fd-9415-63f6c2612f6b"),
+                            DateCreated = new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Local),
+                            GSTPercentage = 18m,
+                            IsActive = true,
+                            Name = "Cakes",
+                            TempId = new Guid("1b5dbc22-55b8-433a-a793-6f48ed181cfb")
+                        },
+                        new
+                        {
+                            Id = new Guid("b0baf39f-97e9-47e0-8fdb-2b7c27369992"),
+                            DateCreated = new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Local),
+                            GSTPercentage = 5m,
+                            IsActive = true,
+                            Name = "Spices",
+                            TempId = new Guid("5e5e7123-121b-47d9-a8fa-9a4c7e6419c2")
+                        },
+                        new
+                        {
+                            Id = new Guid("602a0944-b739-4c04-819f-7814d100d0be"),
+                            DateCreated = new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Local),
+                            GSTPercentage = 12m,
+                            IsActive = true,
+                            Name = "Lahori Beverages",
+                            TempId = new Guid("3bcd45eb-9d6b-4cee-ae53-53b60b481ace")
+                        },
+                        new
+                        {
+                            Id = new Guid("5f9eea48-4f0b-41bf-a552-3be00362f473"),
+                            DateCreated = new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Local),
+                            GSTPercentage = 12m,
+                            IsActive = true,
+                            Name = "Butter",
+                            TempId = new Guid("c52a99ef-0253-4d80-aa6e-41c8c59356ae")
+                        });
                 });
 
             modelBuilder.Entity("DistributerManagementSystemModels.Retailer", b =>

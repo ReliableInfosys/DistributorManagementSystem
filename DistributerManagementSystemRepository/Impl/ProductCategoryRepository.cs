@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace DistributerManagementSystemRepository.Impl
 {
-    public class ProductCategoryRepository : GenericRepository<ProductCategory, DistributerManagementSystemContext>, IProductCategoryRepository
+    public class ProductCategoryRepository : GenericRepository<ProductsCategory, DistributerManagementSystemContext>, IProductCategoryRepository
     {
         public ProductCategoryRepository(DistributerManagementSystemContext context) : base(context)
         {
+
         }
     }
 }

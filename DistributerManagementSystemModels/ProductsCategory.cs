@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DistributerManagementSystemModels
 {
-    public class ProductCategory: BaseModel
-    {       
-
-        public decimal GSTPercentage { get; set; }
+    public class ProductsCategory: BaseModel
+    {
+        
         public string Name { get; set; }
+        public decimal GSTPercentage { get; set; }
+        
     }
 }

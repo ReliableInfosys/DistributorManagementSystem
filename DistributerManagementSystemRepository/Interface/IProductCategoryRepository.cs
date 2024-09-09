@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DistributerManagementSystemRepository.Interface
 {
-    public interface IProductCategoryRepository : IGenericRepository<ProductCategory>
+    public interface IProductCategoryRepository : IGenericRepository<ProductsCategory>
     {
 
     }

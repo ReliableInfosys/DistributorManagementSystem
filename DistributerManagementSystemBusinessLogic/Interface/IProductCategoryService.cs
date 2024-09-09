@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DistributerManagementSystemBusinessLogic.Interface
 {
-    public interface IProductCategoryService : IGenericService<ProductCategory>
+    public interface IProductCategoryService : IGenericService<ProductsCategory>
     {
 
     }

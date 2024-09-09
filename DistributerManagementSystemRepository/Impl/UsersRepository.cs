@@ -16,7 +16,7 @@ namespace DistributerManagementSystemRepository.Impl
                 
         }
 
-        public static void Add(ProductCategory entity)
+        public static void Add(ProductsCategory entity)
         {
             throw new NotImplementedException();
         }
